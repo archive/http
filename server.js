@@ -1,5 +1,7 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Blaha... Hello World\nApp (archive) is running..');
-}).listen(11637);
+var server = require("express").createServer();
+
+server.get("/", function(request, response) {
+	response.send("yeah, or?");
+});
+
+server.listen(11637);
